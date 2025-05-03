@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modern landing page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .hero-section{
+            /* background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); */
+            padding: 120px 0;
+            min-height: 70vh;
+
+        }
+        .feature-icon{
+            width: 64px;
+            height: 64px;
+            background: #6366f1;
+            color: black;
+            border-radius: 12px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 1rem;
+
+        }
+        .card{
+            border: none;
+            transition: transform 0.3s ease;
+        }
+        .card:hover{
+            transform:translateY(-5px);
+        }
+        /* .column7 {
+            float: right;
+        } */
+         .testimonial-img{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+         }
+         .home{
+          width: 100%;
+          height: 80vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+         }
+         .home-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+         .heading-sm{
+            font-size: 25px;
+            font-weight: 600;
+            margin-top: 10px 0px;
+         }
+         .heading-md{
+            font-size: 60px;
+            margin-top : 22px;
+font-weight: 400;
+         }
+         .img_home{
+            width:500px;
+        
+        
+         }
+
+
+         .img-fluid rounded-4 shad{
+            width: 70px;
+            height:80px;
+            padding-right: 20px;
+         }
+         .headings{
+            align-items: center;
+         }
+         .para-services{
+            align-items: center;
+         }
+
+         .services { /* The parent container of the h3 and p */
+  width: 100%;
+  height: 100vh;
+}
+.headings{
+    text-align: center;
+    font-size: 37px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #ed0000;
+    
+    /* background: linear-gradient(to right, #ed0000 42%, #6850de 58%); */
+    --webkit-background-clip:text;
+    /* -webkit-text-fill-color: transparent; */
+    position: relative;
+}
+.headings::after{
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    background-color: #ed0000;
+}
+.para-services{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+    line-height: 29px;
+    max-width: 600px;
+    margin: 29px auto;
+}
+.service-container{
+    padding: 37px 0;
+}
+.content-services{
+    display: flex;
+}
+.icon-service{
+    margin: 0px 24px;
+}
+.service_icons{
+    font-size: 25px ;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    border: 1px solid #d7d7d7;
+    border-radius: 100%;
+    color: black;
+    transition: background-color 400ms;
+}
+.heading-text{
+    font-size: 19px;
+font-weight: 600;
+color: rgba(0, 0, 0, 0.825);
+}
+.para-text{
+    font-size: 19px;
+    font-weight: 600;
+    color:black;
+    line-height: 25px;
+}
+.content_services:hover .service_icons{
+    background-color: #ed0000;
+    color: white;
+}
+.skills{
+    width: 72%;
+    /* border: 1px solid red; */
+    margin: auto;
+}
+.heading_skills{
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    font-weight: 400;
+    margin: 20px 0;
+}
+.heading-text{
+    font-size: 22px;
+    font-weight: 400;
+    margin: 16px 0;
+    color: black; 
+}
+
+h3{
+    color: black;
+}
+.coding_heading{
+    font-size: 25px;
+    margin: 6px;
+    color: black;
+}
+.progress_container{
+    height: 25px;
+    padding: 2px;
+    border-radius: 80px;
+    background-color: white;
+    border: 2px solid rgb(219, 5, 5);
+    width: 80%;
+    margin-bottom: 19px;
+}
+
+.progress-bar{
+    background-color: blue;
+    color: white;
+}
+
+
+
+.product-section {
+            padding: 4rem 0;
+            text-align: center;
+            margin-top: 80px; /* Increased margin-top to match navbar height */
+        }
+
+        .product-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .product-card p {
+            font-size: 1rem;
+            color: #6c757d;
+            margin-bottom: 1rem;
+        }
+
+        .product-card .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ff6700;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-card .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .product-card .btn:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 992px) {
+            .product-grid {
+                gap: 1.5rem;
+            }
+
+            .product-card {
+                max-width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                gap: 1rem;
+            }
+
+            .product-card {
+                max-width: 100%;
+            }
+
+            .product-section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .product-section {
+                padding: 3rem 0;
+            }
+        }
+
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <!-- navbar begins -->
+     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-small"> -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+            <div class="container">
+                <a href="" class="navbar-brand fw-bold text-primary">
+                
+                   
+                    <!-- <i class="bi bi-box-seam-fill"></i>Startup -->
+                    <!-- <i class="bi bi-shield-fill-check"></i>Jade -->
+                    <i class="bi bi-box-seam-fill"></i>devon
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="#features">About us</a>
+                        </li>
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="#Pricing">Services</a>
+                        </li>
+
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="product.html">projects</a>
+                        </li>
+
+                        <li class="nav-item"> 
+                            <a class="btn btn-primary ms-2" href="signup.html">Contact us</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+        <section class="hero-section text-blue d-flex align-items-center">
+            <div class="container ">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <h1 class="display-4 fw-bold mb-4">Hi guys I am Osondu Darlington</h1>
+        <p class="lead mb-4 fw-bold">Project Manager,Executive Virtual Assistant</p>
+        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+        
+        <a class="btn btn-primary btn-lg w-100 w-sm-auto fw-bold" href="https://calm-macaron-99ae23.netlify.app/">project</a>
+        <a class="btn btn-outline-primary btn-lg w-100 w-sm-auto fw-bold" href="prenup.html"> learn more</a>
+        <!-- <div class="col-lg-6">
+            <img class="img-fluid" src="" alt="">
+        
+        </div> -->
+        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid rounded-4 shad" src="images/d4 (2).jpg" alt="">
+                    
+                    </div>
+                    
+        
+                </div>
+        
+            </div>
+        
+        </section>
+
+
+
+
+
+        <section class="product-section">
+            <div class="container">
+                <!-- <h2>Featured Products</h2> -->
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/3Lite dp.jpg" alt="Product 1">
+                        <h3>Product 1</h3>
+                        <p>Description of Product 1.</p>
+                        <p class="price">$25.00</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/brown-retro-electronic-blender-device.avif" alt="Product 2">
+                        <h3>Product 2</h3>
+                        <p>A very efficient Blender.</p>
+                        <p class="price">$9.00</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/istockphoto-178487234.jpg" alt="Product 3">
+                        <h3>Product 3</h3>
+                        <p>Description of Product 3.</p>
+                        <p class="price">$75.00</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/closeup-electronic-circuit-board-with-cpu.jpg" alt="Product 4">
+                        <h3>Product 4</h3>
+                        <p>Description of Product 4.</p>
+                        <p class="price">$100.00</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                     <div class="product-card">
+                        <img src="images/motherboard-closeup-technology-integrated-microchip-circuit-board-computer-processor-with-neon-light.jpg" alt="Product 5">
+                        <h3>Product 5</h3>
+                        <p>Description of Product 5.</p>
+                        <p class="price">$25.00</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/closeup-electronic-circuit-board-345.avif" alt="">
+                        
+                        <h3>Product 6</h3>
+                        <p>Description of Product 6.</p>
+                        <p class="price">$50.00</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+          </section>
+
+
+
+
+
+
+          <div class="container py-5">
+            <h2 class="text-center mb-5">Our Expertise</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+              <div class="col">
+                <div class="card h-100 shadow-sm">
+                  <div class="card-body text-center">
+                    <!-- <i class="bi bi-code-slash text-primary display-4 mb-3"></i> -->
+                    <i class="bi bi-tv-fill"></i>
+                    <h5 class="card-title">Technical Product Management</h5>
+                    <p class="card-text">  Essential and solid understanding of system architecture, APIs, software development concepts, and related technologies.  Understanding the underlying technical difficulties and viability.</p>
+                    <ul class="list-unstyled mt-3">
+                      <li><i class="bi bi-database-fill-up"></i> Data Analysis</li>
+                      <li><i class="bi bi-pen-fill"></i> Technical writing</li>
+                      <li><i class="bi bi-safe2-fill"></i> Product Roadmapping</li>
+                      <li><i class="bi bi-steam"></i> Product vision and strategy</li>
+                    </ul>
+                    <button class="btn btn-outline-primary mt-3">Learn More</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm">
+                  <div class="card-body text-center">
+                    <i class="bi bi-pencil-ruler text-success display-4 mb-3"></i>
+                    <h5 class="card-title">Product Management</h5>
+                    <p class="card-text"> They are responsible for directing a product's roadmap, strategy, and feature design. Although particular duties may differ based on the size of the business, the sector, and the product</p>
+                    <ul class="list-unstyled mt-3">
+                      <li><i class="bi bi-person-check-fill"></i> Understanding the market and user needs</li>
+                      <li><i class="bi bi-lightbulb-fill"></i> Defining the Product Vision and Strategy</li>
+                      <li><i class="bi bi-table"></i> Planning and Roadmapping</li>
+                      <li><i class="bi bi-tablet-fill"></i> Defining Product Requirements</li>
+                    </ul>
+                    <button class="btn btn-outline-success mt-3">View Portfolio</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm">
+                  <div class="card-body text-center">
+                    <!-- <i class="bi bi-bar-chart-line text-warning display-4 mb-3"></i> -->
+                    <i class="bi bi-bar-chart-line-fill"></i>
+                    <h5 class="card-title">Project Management</h5>
+                    <p class="card-text"> Guiding projects from conception to completion with Meticulous planning, resource coordination and project tracking</p>
+                    <ul class="list-unstyled mt-3">
+                      <li><i class="bi bi-receipt-cutoff"></i> Project Initiation and Planning</li>
+                      <li><i class="bi bi-file-earmark-bar-graph-fill"></i> Budget and cost control</li>
+                      <li><i class="bi bi-file-earmark-check-fill"></i> Proficiency in project management software</li>
+                      <li><i class="bi bi-file-earmark-binary-fill"></i> Technical Acumen</li>
+                    </ul>
+                    <button class="btn btn-outline-warning mt-3">Get a Quote</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm">
+                  <div class="card-body text-center">
+                    <!-- <i class="bi bi-chat-dots text-info display-4 mb-3"></i> -->
+                    <i class="bi bi-chat-left-dots-fill"></i>
+                    <h5 class="card-title">Executive virtual Assistant</h5>
+                    <p class="card-text">A strong skill set that blends administrative expertise with a high level of professionalism, initiative, and the capacity to work autonomously in a remote setting is required of an Executive Virtual Assistant (EVA).</p>
+                    <ul class="list-unstyled mt-3">
+                      <li><i class="bi bi-terminal-fill"></i> Exceptional Organizational and Time Management Skills</li>
+                      <li><i class="bi bi-chat-left-text-fill"></i> Excellent Communication Skills (Written and Verbal)</li>
+                      <li><i class="bi bi-ticket-perforated-fill"></i> Initiative and Proactivity</li>
+                    </ul>
+                    <button class="btn btn-outline-info mt-3">Book a Session</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm">
+                  <div class="card-body text-center">
+                    <!-- <i class="bi bi-shield-check text-danger display-4 mb-3"></i> -->
+
+                    <i class="bi bi-check-square-fill"></i>
+                    <h5 class="card-title">Graphic design</h5>
+                    <p class="card-text">Responsible for establishing a brand's visual identity, improving user experience, and assisting with marketing initiatives on a variety of print and digital media.</p>
+                    <ul class="list-unstyled mt-3">
+                      <li><i class="bi bi-exclude"></i> Proficiency in UI/UX Design Software using Photoshop,Adobe and sketch</li>
+                      <li><i class="bi bi-mastodon"></i>  Creating interactive prototypes and UI Animations</li>
+                      <li><i class="bi bi-motherboard-fill"></i> Creating engaging and beautiful user experience</li>
+                      <li><i class="bi bi-mic-fill"></i> Excellent communication skills include the ability to explain design decisions, articulate design concepts clearly, and successfully show work to clients and team members.</li>
+                    </ul>
+                    <button class="btn btn-outline-danger mt-3">Secure Your Business</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 shadow-sm">
+                  <div class="card-body text-center">
+                    <!-- <i class="bi bi-gear text-secondary display-4 mb-3"></i>
+                     <i class="bi bi-safe2-fill"></i> -->
+                    <h5 class="card-title">Content Writing</h5>
+                    <p class="card-text">Creating high-quality written content including blogs,social media posts and marketing materials tailored to your unique voice and brand </p>
+                    <ul class="list-unstyled mt-3">
+                      <li><i class="bi bi-person-badge-fill"></i>
+
+                        Knowledge of content generation and publication platforms such as WordPress, Drupal, and others is necessary to comprehend content management systems (CMS).</li>
+                      <li><i class="bi bi-mic"></i> Excellent use of communication skills in design of  pictures,films and infographics to create captivating and engaging content</li>
+                      <li><i class="bi bi-person-fill-gear"></i> Strong grasp of Search engine optimization concepts that identify keywords target audience are looking for</li>
+                    </ul>
+                    <button class="btn btn-outline-secondary mt-3">Get Support</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        <section class="service">
+            <h3 class="headings">Services</h3>
+            <p class="para-services">Our Skilled Services: Encouraging Your Achievement Our team of seasoned experts offers the committed assistance you require to reach your objectives. We provide a range of specialized services intended to optimize your business processes, improve your brand visibility, and guarantee that your projects are completed to the highest standards.</p>
+<div class="service-container">
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="content-services">
+                    <span class="icon-service"><i class="bi service_icons bi-bar-chart-line-fill"></i></span>
+                    <div class="context-text">
+                        <h3 class="heading-text">Product Management</h3>
+                        <p class="para-text">Creating a compelling long-term vision for your product and a strategic roadmap that is in line with your business objectives and market prospects are known as product vision and strategy development.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="content-services">
+                    <span class="icon-service"><i class="bi service_icons bi-badge-3d-fill"></i></span>
+                    <div class="context-text">
+                        <h3 class="heading-text">Graphic design</h3>
+                        <p class="para-text">Website and digital design: creating banners, social media graphics, and other digital assets that are both aesthetically pleasing and easy to use.
+                             </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="content-services">
+                    <span class="icon-service"><i class="bi bi-pencil-fill"></i></span>
+                    <div class="context-text">
+                        <h3 class="heading-text">Content Writing</h3>
+                        <p class="para-text">Crafing compelling and engaging write ups that resonates with audiences and drives results</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <div class="row my-5 row-second">
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="content-services">
+                    <span class="icon-service"><i class="bi bi-life-preserver"></i></span>
+                    <div class="context-text">
+                        <h3 class="heading-text">Project Management services</h3>
+                        <p class="para-text">Our project management services are made to offer all-encompassing assistance during the course of the project, guaranteeing that your projects are finished effectively, on schedule, and within your allocated budget.  We provide a customized strategy, modifying our knowledge to fit the particular requirements of every project and customer. </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="content-services">
+                    <span class="icon-service"><i class="bi bi-layers-fill"></i></span>
+                    <div class="context-text">
+                        <h3 class="heading-text">Executive virtual assistant</h3>
+                        <p class="para-text">Offering a wide range of services from database management,Calendar management (scheduling appointments, managing meetings)
+
+                            Email management (filtering, organizing, responding) </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="content-services">
+                    <span class="icon-service"><i class="bi bi-coin"></i></span>
+                    <div class="context-text">
+                        <h3 class="heading-text">web 3 content writing</h3>
+                        <p class="para-text">writing about different trends, opportunities and updates in web3 </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="skills">
+    <h2 class="heading_skills">My Skills</h2>
+    <div class="container">
+<div class="row">
+    <div class="col-lg-6 col-md-12">
+<h4 class="heading_text">Technical skills</h4>
+<div class="content_skills">
+<h5 class="coding_heading">Adobe photoshop </h5>
+<!-- Progress Bar -->
+<div class="progress progress_container" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar w-75">79%</div>
+  </div>
+</div>
+
+<div class="content_skills">
+    <h5 class="coding_heading">Trello and Asana </h5>
+    <!-- Progress Bar -->
+    <div class="progress progress_container" role="progressbar" aria-label="Basic example" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar w-75">79%</div>
+      </div>
+    </div>
+
+    <div class="content_skills">
+        <h5 class="coding_heading">Microsoft Excel,powerpoint</h5>
+        <!-- Progress Bar -->
+        <div class="progress progress_container" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar w-75">79%</div>
+          </div>
+        </div>
+
+
+        <div class="content_skills">
+            <h5 class="coding_heading">Canva and notion </h5>
+            <!-- Progress Bar -->
+            <div class="progress progress_container" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar w-75">75%</div>
+              </div>
+            </div>
+    </div>
+</div>
+    </div>
+
+</div>
+
+        </section>
+
+
+
+
+        <!-- <section id="projects" class="py-5 bg-light">  <div class="container">
+            <div class="row">
+              <div class="col-12 text-center mb-4">  <h2>My Projects</h2>
+                <p class="lead">Showcasing some of my recent work.</p>
+              </div>
+            </div>
+            <div class="row">  <div class="col-md-4 mb-4">  <div class="card h-100">  <img src="images/futuristic-tech.avif" class="card-img-top" alt="Project 1">
+                  <div class="card-body">
+                    <h5 class="card-title">Electronic Ecommerce</h5>
+                    <p class="card-text"> Electronic Ecommerce website displaying electronic products.</p>
+                    <a href="https://udochukwu345.github.io/" class="btn btn-primary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col-md-4 mb-4">  <div class="card h-100">  <img src="images/digital-illustration-microchip.jpg" class="card-img-top" alt="Project 2">
+                  <div class="card-body">
+                    <h5 class="card-title">Crypto investment website</h5>
+                    <p class="card-text">An web3 cryptocurrency website  </p>
+                    <a href="https://calm-macaron-99ae23.netlify.app/" class="btn btn-primary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col-md-4 mb-4">  <div class="card h-100">  <img src="images/smartphone-headset-power-bank-with-charging-cables.avif" class="card-img-top" alt="Project 3">
+                  <div class="card-body">
+                    <h5 class="card-title">Decentralized exchange platform </h5>
+                    <p class="card-text">Building a decentralized exchange </p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+        
+              </div>
+          </div>
+        </section>
+         -->
+
+        <footer class="bg-dark text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Services</h5>
+                        <p> 2025 services. All rights reserved</p>
+            
+                    </div>
+            
+                </div>
+            </div>
+                   </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      </body>

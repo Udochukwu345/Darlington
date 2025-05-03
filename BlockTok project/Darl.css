@@ -1,0 +1,236 @@
+.login-button{
+    background-color: darkblue;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+.login-button:hover{
+    background-color: blue;
+}
+.navbar{
+    background-color:white;
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+.navbar-brand{
+    font-weight: 500;
+    color: darkblue;
+    font-style: 24px;
+}
+
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+.navbar-toggler:focus, .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+.navbar-link{
+    color:white;
+    font-weight: 500;
+    position: relative;
+
+
+
+.navbar-link mx-lg-2{
+    color: white;
+    
+}
+.navbar-link:hover, .navbar-link.active{
+color: white;
+}
+@media screen and  (min-width:901px) {
+    
+
+.navbar-link::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: blue;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-link:hover::before, .navbar-link.active::before{
+    width: 100%;
+    visibility:visible;
+    
+}
+}
+
+
+.about-section {
+  padding: 80px 0; /* Increased padding for better vertical spacing */
+  background-color: #f8f9fa; /* Light background for the whole section - adjust to your preference */
+}
+
+.about-image {
+  margin-bottom: 30px; /* Default margin when the image is above the text (smaller screens) */
+}
+
+@media (min-width: 992px) {
+  .about-image {
+    margin-bottom: 0; /* Remove default margin on larger screens */
+    margin-right: 30px; /* Add right margin to the image when it's to the left of the text */
+  }
+}
+
+
+.about-image img {
+  border-radius: 10px; /* Slightly more rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Refined shadow - more subtle and softer */
+  width: 100%; /* Ensure image takes full width of its container */
+  height: auto;  /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.about-image img:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+
+
+
+.section-heading {
+  font-size: 2.5rem; /* Larger heading for impact */
+  font-weight: 700; /* Strong font weight */
+  margin-bottom: 20px; /* Increased margin below heading */
+  color: #343a40; /* Darker heading color for better contrast */
+  text-align: left; /* Align heading to the left */
+  position: relative; /* For the underline */
+  padding-bottom: 12px; /* Space for the underline */
+}
+
+.section-heading::after {
+  content: ''; /* Empty content, but required for pseudo-element */
+  position: absolute; /* Positioned relative to the heading */
+  left: 0; /* Start from the left edge */
+  bottom: 0; /* Place it at the bottom */
+  width: 100px; /* Width of the underline */
+  height: 3px; /* Thickness of the underline */
+  background-color: #007bff; /* Primary color for the underline */
+  /* You could use a gradient here for a more modern look:
+  background-image: linear-gradient(to right, #007bff, #6c757d); */
+}
+
+
+.lead {
+  font-size: 1.25rem; /* Slightly larger lead paragraph */
+  line-height: 1.7; /* Increased line height for better readability */
+  color: #495057; /* Slightly darker text for body */
+  margin-bottom: 25px; /* Increased margin below lead paragraph */
+}
+
+.about-content p {
+  font-size: 1.1rem;  /* Increased font size for normal paragraphs */
+  line-height: 1.7;
+  color: #6c757d; /* Slightly muted color for normal paragraphs */
+  margin-bottom: 20px;
+}
+
+
+.skills-heading {
+  font-size: 1.5rem; /* Increased size of skills heading */
+  font-weight: 600; /* Semi-bold font weight */
+  margin-bottom: 20px;
+  color: #343a40;
+  text-align: left;
+}
+
+.list-inline-item {
+  margin-right: 10px; /* Spacing between skill badges */
+  margin-bottom: 5px;  /* Add a little margin below for wrapping */
+}
+.list-inline-item:last-child {
+    margin-right: 0; /* remove right margin from last item */
+}
+
+.badge {
+  font-size: 1rem; /* Increased font size in badges */
+  padding: 0.5rem 1rem; /* Slightly increased padding in badges */
+  border-radius: 25px; /* Fully rounded corners for a modern look */
+  background-color: #007bff; /* Use your primary color */
+  color: white; /* White text color */
+  font-weight: 500; /* Medium font weight for badges */
+  transition: background-color 0.2s ease; /* Smooth transition for hover */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.badge:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.btn-primary {
+  padding: 12px 30px; /* Increased padding for the button */
+  font-size: 1.1rem; /* Increased font size */
+  border-radius: 30px; /* Fully rounded corners for the button */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  background-color: #007bff; /* Primary color */
+  border: none; /* Remove the default border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.btn-primary:active {
+  background-color: #004080; /* Even darker shade on active */
+  transform: translateY(0); /* No lift when active/pressed */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Smaller shadow when active */
+}
+
+
+/* Responsive adjustments (optional, but recommended) */
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 2rem; /* Smaller heading on medium screens */
+    text-align: center; /* Center heading on small screens if you prefer */
+  }
+  .section-heading::after{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .lead {
+    font-size: 1.2rem; /* Smaller lead on medium screens */
+  }
+  .about-content p {
+     font-size: 1rem;
+  }
+  .about-image {
+    margin-bottom: 20px; /* Add margin below image on small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .section-heading {
+    font-size: 1.75rem; /* Even smaller heading on small screens */
+  }
+  .lead {
+    font-size: 1.1rem; /* Smaller lead on small screens */
+  }
+   .about-content p {
+     font-size: 0.95rem; /* slightly smaller paragraph text on very small screens */
+   }
+  .btn-primary {
+    font-size: 1rem; /* Smaller button text on very small screens */
+    padding: 10px 24px;
+  }
+  .badge {
+    font-size: 0.9rem; /* smaller badge text on very small screens */
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+
